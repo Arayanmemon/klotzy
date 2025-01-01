@@ -92,9 +92,9 @@ app.post('/extract', async (req, res) => {
     browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      executablePath: process.env.CHROME_BIN, // Use Docker-configured Chromium
+      // executablePath: process.env.CHROME_BIN, // Use Docker-configured Chromium
     });
-
+    console.log(process.env.CHROME_BIN);
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
