@@ -166,8 +166,8 @@ const App = () => {
       const { imageSrc, pTexts } = result;
       
       const response = await axios.post(
-        // 'https://klotze.onrender.com/generate-video',
-        'http://localhost:9090/generate-video',
+        'https://klotzy.onrender.com/generate-video',
+        // 'http://localhost:9090/generate-video',
         { imageSrc:dataURL, pTexts },
         { 
           responseType: 'blob',
@@ -203,8 +203,8 @@ const App = () => {
 
     try {
       const response = await axios.post(
-        // "https://klotze.onrender.com/extract",
-        "http://localhost:9090/extract",
+        "https://klotzy.onrender.com/extract",
+        // "http://localhost:9090/extract",
         // "https://video-visz.onrender.com/extract",
         { url },
         {
