@@ -202,6 +202,7 @@ const App = () => {
     resetStates();
 
     try {
+      console.log("Scraping data from URL:", url);
       const response = await axios.post(
         "https://klotzy.onrender.com/extract",
         // "http://localhost:9090/extract",
@@ -211,7 +212,7 @@ const App = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          // timeout: 30000
+          timeout: 30000
         }
       );
 
