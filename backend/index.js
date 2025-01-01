@@ -92,7 +92,7 @@ app.post('/extract', async (req, res) => {
     browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH, // Use Docker-configured Chromium
+      executablePath: process.env.CHROME_BIN, // Use Docker-configured Chromium
     });
 
     const page = await browser.newPage();
