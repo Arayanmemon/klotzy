@@ -6,6 +6,6 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 WORKDIR /usr/src/app
 
 COPY /backend/package*.json ./backend/
-RUN npm run build --prefix 
+RUN npm run build
 CMD ['node', 'index.js']
 
