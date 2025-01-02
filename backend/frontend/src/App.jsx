@@ -166,7 +166,7 @@ const App = () => {
       const { imageSrc, pTexts } = result;
       
       const response = await axios.post(
-        'https://klotzy.onrender.com/generate-video',
+        'https://klotze-1.onrender.com/generate-video',
         // 'http://localhost:9090/generate-video',
         { imageSrc:dataURL, pTexts },
         { 
@@ -204,7 +204,7 @@ const App = () => {
     try {
       console.log("Scraping data from URL:", url);
       const response = await axios.post(
-        "https://klotzy.onrender.com/extract",
+        "https://klotze-1.onrender.com/extract",
         // "http://localhost:9090/extract",
         // "https://video-visz.onrender.com/extract",
         { url },
@@ -212,7 +212,7 @@ const App = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          timeout: 30000
+          // timeout: 30000
         }
       );
 
